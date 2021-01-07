@@ -3,7 +3,7 @@
     <div class="container" style="position: absolute; animation: 3s appear;">
       <VueClock />
     </div>
-    <p style="top: 95%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; border-radius: 88px; background: #ffffff; z-index: 2200; padding-top: 8px; padding-bottom: 8px; padding-left: 15px; padding-right: 15px; font-size: 0.8rem; animation: 3s appear;">Crafted by <a href="https://github.com/jaconhq" target="_blank" style="text-decoration: none;">Jacob Marshall</a></p>
+    <p style="top: 95%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; border-radius: 88px; background: #ffffff; z-index: 2200; padding-top: 8px; padding-bottom: 8px; padding-left: 15px; padding-right: 15px; font-size: 0.8rem; animation: 3s appear;">Crafted by <a href="https://github.com/jacobhq" target="_blank" style="text-decoration: none;">Jacob Marshall</a></p>
     <div id="container">
       <img :src="this.img">
     </div>
