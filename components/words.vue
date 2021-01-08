@@ -2,7 +2,8 @@
   <div>
     <section id="words">
       <div class="center">
-        <p class="tag">{{ text }}</p>
+        <p class="tag" v-show="!huge">{{ text }}</p>
+        <h1 class="welcome" v-show="huge">{{ text }}</h1>
       </div>
         <p style="animation: 5s dismiss; top: 295%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; border-radius: 88px; background: #20fc8f; color: #0b3954; z-index: 2200; padding-top: 8px; padding-bottom: 8px; padding-left: 15px; padding-right: 15px; font-size: 0.8rem;">Tap anywhere to continue</p>
     </section>
@@ -11,12 +12,11 @@
 
 <script>
 export default {
-  props: {
-    'go';
-  },
+  props: {},
   data() {
     return {
-      text: "Get ready"
+      text: "Get ready",
+      huge: false
     }
   },
   methods: {
@@ -25,7 +25,8 @@ export default {
     },
     init() {
       this.text = "for the best", this.timeout(5000)
-      this.text = "PORTFOLIO", this.timeout(5000)
+      this.huge = true, this.text = "PORTFOLIO", this.timeout(5000)
+      this.hug = false, this.text = "that you will ever see", this.timeout(5000)
     }
   },
   created() {
