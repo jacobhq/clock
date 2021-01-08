@@ -22,7 +22,7 @@
     </section>
     <section id="words" v-on:click="init">
       <div class="center" style="top: 250%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute;">
-        <p class="tag" v-show="!huge">{{ text }}</p>
+        <p class="tag" style="width: 20vw; line-height: 1.5;" v-show="!huge">{{ text }}</p>
         <h1 class="welcome" v-show="huge">{{ text }}</h1>
       </div>
         <p style="animation: 5s dismiss; top: 295%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; border-radius: 88px; background: #20fc8f; color: #0b3954; z-index: 2200; padding-top: 8px; padding-bottom: 8px; padding-left: 15px; padding-right: 15px; font-size: 0.8rem;">Tap anywhere to begin</p>
@@ -42,12 +42,13 @@
             <p style="padding: 5px;">An easy way to generate tickets for your next big event.</p>
             <br>
             <a href="#" class="btn n-bg">Visit</a>
+            <br>
           </div>
         </div>
         <br>
         <br>
         <div style="animation: 0.3s appear;">
-          <a href="#words" class="btn">Who I am</a>
+          <a href="#words" class="btn">Download my resumé</a>
           <a href="#" class="btn n-bg">↑</a>
         </div>
       </div>
@@ -75,7 +76,7 @@ export default {
       return new Promise(resolve => setTimeout(resolve, ms));
     },
     init() {
-      this.huge = true, this.text = "To be blown away"
+      this.huge = true, this.text = "Enjoy"
       this.timeout(6000)
       window.location.assign("#projects")
     },
@@ -113,7 +114,7 @@ export default {
   },
   data () {
     return {
-      text: "Get ready",
+      text: "Hello, I'm Jacob, welcome to my portfolio. In the near future, you'll have the opportunity to view some of my works, and download my resumé.",
       huge: false,
       fullscreen: false,
       img: 'https://www.gstatic.com/meet/conversation_primary_e56627be1d0b5a1fcf775d2c0e3dfff8.jpg',
@@ -153,6 +154,13 @@ export default {
 .card a {
   font-weight: 400;
   padding: 10px;
+  font-size: 1rem;
+}
+.card a:hover {
+  background-color: #20fc8e3a;
+}
+.card a:focus {
+  box-shadow: 0 0 0 3px #20fc8f3a;
 }
 
 section {
