@@ -5,6 +5,30 @@
 </template>
 
 <style>
+.btn {
+  background-color: #20fc8f;
+    border: none;
+    margin: 3px;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0 rgba(32,252,142,.37);
+    transition: all .3s ease;
+    color: #0b3954;
+        padding: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.btn:focus {
+      box-shadow: 0 0 0 3px rgba(32,252,142,.37);
+    border: none;
+    outline: none;
+}
+.btn.n-bg {
+  background-color: #0b3954;
+  color: #20fc8f;
+}
 html {
   font-family:
     'Source Sans Pro',
@@ -22,6 +46,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 *,

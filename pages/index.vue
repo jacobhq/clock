@@ -3,10 +3,12 @@
     <div class="container" style="position: absolute; animation: 3s appear;">
       <VueClock />
     </div>
-    <p style="top: 95%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; border-radius: 88px; background: #ffffff; z-index: 2200; padding-top: 8px; padding-bottom: 8px; padding-left: 15px; padding-right: 15px; font-size: 0.8rem; animation: 3s appear;">Crafted by <a href="https://github.com/jaconhq" target="_blank" style="text-decoration: none;">Jacob Marshall</a></p>
+    <p style="top: 95%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); position: absolute; border-radius: 88px; background: #ffffff; z-index: 2200; padding-top: 8px; padding-bottom: 8px; padding-left: 15px; padding-right: 15px; font-size: 0.8rem; animation: 3s appear;">Crafted by <a href="#welcome" style="text-decoration: none;">Jacob Marshall</a></p>
     <div id="container">
       <img :src="this.img">
     </div>
+    <welcome />
+    <words :go="true" />
   </div>
 </template>
 
@@ -14,10 +16,13 @@
 <script>
 import Vue from 'vue';
 import VueClock from 'j-clock';
+import welcome from '~/components/welcome.vue';
+import Words from '~/components/words.vue';
 
 Vue.component('VueClock', VueClock);
 
 export default {
+  components: { welcome, Words },
   methods: {
     random: function() {
       var current = Math.floor(Math.random() * this.urls.length);
@@ -37,6 +42,24 @@ export default {
 </script>
 
 <style>
+section {
+  height: 100vh;
+  background-color: #0b3954;
+  color: #20fc8f;
+}
+.tag {
+  font-family: monospace;
+}
+.welcome {
+  font-size: 8rem;
+}
+.center {
+  top: 150%;
+  left: 50vw;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
 @keyframes appear {
   0% {
     opacity: 0;
